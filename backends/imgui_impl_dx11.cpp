@@ -404,7 +404,7 @@ bool    ImGui_ImplDX11_CreateDeviceObjects()
             {\
               PS_INPUT output;\
               output.pos = mul( ProjectionMatrix, float4(input.pos.xy, 0.f, 1.f));\
-              output.col = input.col;\
+              output.col = pow(input.col, 2.2f);\
               output.uv  = input.uv;\
               return output;\
             }";
